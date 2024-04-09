@@ -12,10 +12,11 @@
 var middleNode = function (head) {
   let slowPointer = head;
   let fastPointer = head;
-  while (slowPointer != null && fastPointer !== null) {
+  while (fastPointer && fastPointer.next) {
     slowPointer = slowPointer.next;
-    console.log('slowpointer', slowPointer)
-    fastPointer = fastPointer.next.next
-    console.log('fastPointer', fastPointer);
+    // console.log('slowpointer',slowPointer)
+    fastPointer = fastPointer.next.next;
+    //  console.log('fastPointer',fastPointer);
   };
+  return slowPointer
 };
